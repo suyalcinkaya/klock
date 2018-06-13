@@ -15,7 +15,7 @@
         function run() {
             console.log('Klock: updated');
 
-            /*vm.newDate = new Date('December 17, 1995 00:00:13');*/
+            // vm.newDate = new Date('June 23, 1992 00:00:13'); // Testing date
 
             vm.newDate = new Date();
             vm.day = vm.newDate.getDay();
