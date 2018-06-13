@@ -1,0 +1,81 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: justify;
+    pointer-events: none;
+    -webkit-user-select: none;
+}
+
+p, span {
+    color: #333333;
+    transition: color 0.4s ease-out;
+    -ms-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    -webkit-transition: color 0.4s ease-out;
+    font-size: 17px;
+}
+
+#it, #is, span.active {
+    color: #fff !important;
+    transition: color 0.4s ease-out;
+    -ms-transition: color 0.4s ease-out;
+    -moz-transition: color 0.4s ease-out;
+    -webkit-transition: color 0.4s ease-out;
+}
+
+#klock {
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+#klock__line-1, #klock__line-1 span {
+    letter-spacing: 1rem;
+}
+
+#klock__line-2, #klock__line-2 span {
+    letter-spacing: .9rem;
+}
+
+#klock__line-3, #klock__line-3 span {
+    letter-spacing: .96rem;
+}
+
+#klock__line-4, #klock__line-4 span {
+    letter-spacing: .94rem;
+}
+
+#klock__line-5, #klock__line-5 span {
+    letter-spacing: .95rem;
+}
+
+#klock__line-6, #klock__line-6 span {
+    letter-spacing: .94rem;
+}
+
+#klock__line-7, #klock__line-7 span {
+    letter-spacing: .92rem;
+}
+
+#klock__line-8, #klock__line-8 span {
+    letter-spacing: .96rem;
+}
+
+#klock__line-9, #klock__line-9 span {
+    letter-spacing: .915rem;
+}
+
+#klock__line-10, #klock__line-10 span {
+    letter-spacing: .875rem;
+}
+
+#klock__line-11, #klock__line-11 span {
+    letter-spacing: .915rem;
+}
