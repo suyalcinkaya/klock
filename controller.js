@@ -66,64 +66,54 @@
                 }
             }
             else if(vm.minsSecs >= 230 && vm.minsSecs < 730) {
-                updateDesc('#five');
-                updateDesc('#past');
+                updateDesc(['#five', '#past']);
             }
             else if(vm.minsSecs >= 730 && vm.minsSecs < 1230) {
-                updateDesc('#ten');
-                updateDesc('#past');
+                updateDesc(['#ten', '#past']);
             }
             else if(vm.minsSecs >= 1230 && vm.minsSecs < 1730) {
-                updateDesc('#quarter');
-                updateDesc('#past');
+                updateDesc(['#quarter', '#past']);
             }
             else if(vm.minsSecs >= 1730 && vm.minsSecs < 2230) {
-                updateDesc('#twenty');
-                updateDesc('#past');
+                updateDesc(['#twenty', '#past']);
             }
             else if(vm.minsSecs >= 2230 && vm.minsSecs < 2730) {
-                updateDesc('#twenty');
-                updateDesc('#five');
-                updateDesc('#past');
+                updateDesc(['#twenty', '#five', '#past']);
             }
             else if(vm.minsSecs >= 2730 && vm.minsSecs < 3230) {
-                updateDesc('#half');
-                updateDesc('#past');
+                updateDesc(['#half', '#past']);
             }
             else if(vm.minsSecs >= 3230 && vm.minsSecs < 3730) {
-                updateDesc('#twenty');
-                updateDesc('#five');
-                updateDesc('#to');
+                updateDesc(['#twenty', '#five', '#to']);
             }
             else if(vm.minsSecs >= 3730 && vm.minsSecs < 4230) {
-                updateDesc('#twenty');
-                updateDesc('#to');
+                updateDesc(['#twenty', '#to']);
             }
             else if(vm.minsSecs >= 4230 && vm.minsSecs < 4730) {
-                updateDesc('#quarter');
-                updateDesc('#to');
+                updateDesc(['#quarter', '#to']);
             }
             else if(vm.minsSecs >= 4730 && vm.minsSecs < 5230) {
-                updateDesc('#ten');
-                updateDesc('#to');
+                updateDesc(['#ten', '#to']);
             }
             else if(vm.minsSecs >= 5230 && vm.minsSecs < 5730) {
-                updateDesc('#five');
-                updateDesc('#to');
+                updateDesc(['#five', '#to']);
             }
             else {
                 // nothing
             }
         }
 
-        function updateDesc(cls) {
-            angular.element(document.querySelector("desc")).removeClass("active");
-            angular.element(document.querySelector(cls)).addClass("active");
+        function updateDesc(ids) {
+            angular.element(".desc").removeClass("active");
+
+            angular.forEach(ids, function (id) {
+                angular.element(id).addClass("active");
+            });
         }
 
-        function updateHour(cls) {
-            angular.element(document.querySelector("hr")).removeClass("active");
-            angular.element(document.querySelector(cls)).addClass("active");
+        function updateHour(id) {
+            angular.element(".hr").removeClass("active");
+            angular.element(id).addClass("active");
         }
 
         $scope.$on('$destroy', function() {
