@@ -41,6 +41,7 @@
             }
 
             vm.hoursObj = {
+                0: '#midnight',
                 1: '#one',
                 2: '#two',
                 3: '#three',
@@ -54,8 +55,7 @@
                 11: '#eleven',
                 12: '#twelve',
                 23: '#eleven',
-                24: '#midnight',
-                0: '#midnight'
+                24: '#midnight'
             };
 
             updateHour(vm.hoursObj[vm.hours]);
