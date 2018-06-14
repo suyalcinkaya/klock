@@ -15,7 +15,7 @@
         function run() {
             console.log('Klock: updated');
 
-            // vm.newDate = new Date('June 23, 1992 00:00:13'); // Testing date
+             // vm.newDate = new Date('June 23, 1992 16:00:13'); // Testing date
 
             vm.newDate = new Date();
             vm.day = vm.newDate.getDay();
@@ -62,7 +62,8 @@
 
             if((vm.minsSecs >= 5730 && vm.minsSecs < 6000) || (vm.minsSecs >= 0 && vm.minsSecs < 230)) {
                 if(vm.hours !== 24 && vm.hours !== 0) {
-                    updateDesc('#oclock');
+                    angular.element(".desc").removeClass("active");
+                    angular.element("#oclock").addClass("active");
                 }
             }
             else if(vm.minsSecs >= 230 && vm.minsSecs < 730) {
@@ -106,7 +107,7 @@
         function updateDesc(ids) {
             angular.element(".desc").removeClass("active");
 
-            angular.forEach(ids, function (id) {
+            angular.forEach(ids, function(id) {
                 angular.element(id).addClass("active");
             });
         }
