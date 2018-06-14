@@ -1,5 +1,9 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 body, html {
-    font-family: 'Apercu', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     position: absolute;
     top: 0;
     left: 0;
@@ -11,12 +15,19 @@ body, html {
 }
 
 body {
-    background: #000;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    line-height: 1.5;
     color: #fff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: justify;
-    pointer-events: none;
-    -webkit-user-select: none;
+}
+
+* {
+    outline: 0;
+    -webkit-tap-highlight-color: #000;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
 }
 
 div.frame {
@@ -42,6 +53,26 @@ div.content {
     margin: 0 auto;
     text-align: left;
     padding: 10px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+    font-size: .75rem;
+}
+
+.footer a {
+    color: #333333;
+    transition: color 0.2s ease-out;
+    -ms-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -webkit-transition: color 0.2s ease-out;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
 }
 
 p, span {
